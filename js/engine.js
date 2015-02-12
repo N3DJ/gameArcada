@@ -97,10 +97,8 @@ var Engine = (function(global) {
      */
     function checkCollisions(){
         allEnemies.forEach(function(enemy) {
-           if (player.x + 20 == enemy.x + 100 ){
-           //|| player.x < enemy.x + 10 && player.y > enemy.y - 10 || player.y < enemy.y + 10
-               alert(player.x + " " + enemy.x);
-               //alert(player.y + " " + enemy.y);
+            if (player.x < enemy.x + 100 && player.x > enemy.x &&
+                player.y < enemy.y + 70 && 90 + player.y > enemy.y) {
                player.x = 200;
                player.y = 350;
            }
