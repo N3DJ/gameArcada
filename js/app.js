@@ -40,33 +40,33 @@ var Level = function(){
 Level.prototype.levelOne = function(){
     var enemy1 = new Enemy(-100,140,100);
     var enemy2 = new Enemy(-100,220,50);
-    var enemy3 = new Enemy(-100,60,150);
+    var enemy3 = new Enemy(-100,300,150);
     this.allEnemies = [enemy1,enemy2,enemy3];
 }
 Level.prototype.levelTwo = function(){
     var enemy1 = new Enemy(-100,140,200);
     var enemy2 = new Enemy(-100,220,100);
-    var enemy3 = new Enemy(-100,60,300);
+    var enemy3 = new Enemy(-100,300,300);
     this.allEnemies = [enemy1,enemy2,enemy3];
 }
 Level.prototype.levelThree = function(){
     var enemy1 = new Enemy(-100,140,250);
     var enemy2 = new Enemy(-100,220,200);
-    var enemy3 = new Enemy(-100,60,300);
+    var enemy3 = new Enemy(-100,300,300);
     this.allEnemies = [enemy1,enemy2,enemy3];
 }
 Level.prototype.levelFour = function(){
     var enemy1 = new Enemy(-100,140,250);
     var enemy2 = new Enemy(-100,220,200);
-    var enemy3 = new Enemy(-100,60,300);
-    var enemy4 = new Enemy(-300,60,300);
+    var enemy3 = new Enemy(-100,300,300);
+    var enemy4 = new Enemy(-300,300,300);
     this.allEnemies = [enemy1,enemy2,enemy3,enemy4];
 }
 Level.prototype.levelFive = function(){
     var enemy1 = new Enemy(-100,140,250);
     var enemy2 = new Enemy(-100,220,200);
-    var enemy3 = new Enemy(-100,60,300);
-    var enemy4 = new Enemy(-200,60,300);
+    var enemy3 = new Enemy(-100,300,300);
+    var enemy4 = new Enemy(-200,300,300);
     this.allEnemies = [enemy1,enemy2,enemy3,enemy4];
 }
 

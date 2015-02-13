@@ -17,6 +17,7 @@ var Engine = (function (global) {
         checkCollisions();
         lastTime = now;
         win.requestAnimationFrame(main);
+
     };
 
     function init() {
@@ -45,11 +46,11 @@ var Engine = (function (global) {
     }
 
     function checkXAyes(enemy){
-        return player.x < enemy.x + 80 && player.x > enemy.x;
+        return player.x < enemy.x + 80 && player.x + 55 > enemy.x;
     }
 
     function checkYAxes(enemy) {
-        return player.y < enemy.y + 70 && 90 + player.y > enemy.y;
+        return player.y + 70 < enemy.y + 67 && 70 + player.y > enemy.y;
     }
 
     function render() {
