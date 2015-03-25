@@ -23,7 +23,7 @@ var Enemy = function(x, y, speed) {
     this.x = x;
     this.y = y;
     this.speed = speed;
-}
+};
 
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
@@ -38,19 +38,19 @@ Enemy.prototype.update = function(dt) {
     }
     ctx.clearRect(0,0,505 , 606);
 
-}
+};
 
 // Draw the enemy on the screen
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-}
+};
 
 var Player = function() {
     this.sprite = 'images/char-cat-girl.png';
     this.x = 200;
     this.y = 350;
     this.score = 1;
-}
+};
 
 
 var Level = function(nbOfEnemys, nbOfLvls){
@@ -64,6 +64,9 @@ var Level = function(nbOfEnemys, nbOfLvls){
         if (i > 2){
             do{
                 randomIndex = Math.floor(Math.random() * 3);
+                if (randomIndexWithoutDuplicate.length == 0){
+                    randomIndexWithoutDuplicate.push(randomIndex);
+                }
             } while (!contains(randomIndex,randomIndexWithoutDuplicate));
 
             randomIndexWithoutDuplicate.push(randomIndex);
@@ -78,15 +81,15 @@ var Level = function(nbOfEnemys, nbOfLvls){
     }
     this.allEnemies = allEnemies;
 
-}
+};
 
 Player.prototype.update = function() {
    ctx.clearRect(0,0,505,606);
-}
+};
 
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite),this.x, this.y );
-}
+};
 
 Player.prototype.handleInput = function(keyPressed) {
     switch (keyPressed){
@@ -129,7 +132,7 @@ Player.prototype.handleInput = function(keyPressed) {
             }
             break;
     }
-}
+};
 // Now instantiate your objects.
 var player = new Player();
 var levels = new Level(3,1);
